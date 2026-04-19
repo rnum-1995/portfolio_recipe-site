@@ -1,0 +1,35 @@
+/* Tailwind v4 のメインインポート*/
+@import "tailwindcss";
+
+/* 1. 画面全体を root 要素で埋めるための必須設定 */
+:root {
+  height: 100%;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Vite の初期スタイルが残っている場合は、ここで強制リセット */
+body {
+  display: block;
+  /* 初期設定の flex を解除 */
+  place-items: initial;
+  /* 初期設定の center を解除 */
+  min-width: 0;
+  /* 制限を解除 */
+  /* bg-gray-50 */
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  /* 横幅の制限を完全に消す */
+  margin: 0;
+  text-align: left;
+}
